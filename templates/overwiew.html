@@ -1,0 +1,16 @@
+  <div style="display: flex;flex-direction: column;">
+            <h1>Raspberry Pi Control</h1>
+            <p>System Information:</p>
+            <ul>
+                <li>System: {{ system_info['system'] }}</li>
+                <li>Release: {{ system_info['release'] }}</li>
+                <li>CPU Usage: {{ system_info['cpu_usage'] }}%</li>
+                <li>Memory Usage: {{ system_info['memory_usage'] }}%</li>
+                <li>Battery: {{ system_info['battery'] }}%</li>
+            </ul>
+
+            <form action="/control" method="post">
+                <button type="submit" name="action" value="shutdown">Shutdown Pi</button>
+                <!-- Add more buttons for other actions -->
+            </form>
+        </div>
